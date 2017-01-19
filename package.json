@@ -1,21 +1,31 @@
 {
   "name": "@customcommander/macgyver",
   "version": "1.0.0",
-  "description": "When Native JavaScript Has Been Broken",
+  "description": "Survival Kit For Broken Native Objects",
+  "keywords": [
+      "survival kit",
+      "polyfill",
+      "native objects",
+      "native",
+      "prototype"
+  ],
   "main": "dist/macgyver.js",
-  "scripts": {
-    "test": "make test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/customcommander/macgyver.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/customcommander/macgyver/issues"
-  },
   "homepage": "https://github.com/customcommander/macgyver#readme",
+  "bugs": {
+      "url": "https://github.com/customcommander/macgyver/issues"
+  },
+  "license": "MIT",
+  "author": "Julien Gonzalez <hello@spinjs.com> (https://github.com/customcommander)",
+  "files": [
+      "dist/macgyver.js"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/customcommander/macgyver.git"
+  },
+  "scripts": {
+      "test": "make test"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.13.1",
@@ -28,5 +38,8 @@
     "karma-mocha-reporter": "^2.2.1",
     "mocha": "^3.2.0",
     "webpack": "^1.14.0"
+  },
+  "publishConfig": {
+      "registry": "https://registry.npmjs.org/"
   }
 }
