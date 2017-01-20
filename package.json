@@ -1,30 +1,30 @@
 {
   "name": "@customcommander/macgyver",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Survival Kit For Broken Native Objects",
   "keywords": [
-      "survival kit",
-      "polyfill",
-      "native objects",
-      "native",
-      "prototype"
+    "survival kit",
+    "polyfill",
+    "native objects",
+    "native",
+    "prototype"
   ],
   "main": "dist/macgyver.js",
   "homepage": "https://github.com/customcommander/macgyver#readme",
   "bugs": {
-      "url": "https://github.com/customcommander/macgyver/issues"
+    "url": "https://github.com/customcommander/macgyver/issues"
   },
   "license": "MIT",
   "author": "Julien Gonzalez <hello@spinjs.com> (https://github.com/customcommander)",
   "files": [
-      "dist/macgyver.js"
+    "dist/macgyver.js"
   ],
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/customcommander/macgyver.git"
+    "type": "git",
+    "url": "git+https://github.com/customcommander/macgyver.git"
   },
   "scripts": {
-      "test": "make test"
+    "test": "make test"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -40,6 +40,6 @@
     "webpack": "^1.14.0"
   },
   "publishConfig": {
-      "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/"
   }
 }
