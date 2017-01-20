@@ -77,3 +77,7 @@ macgyver.ductTape();
 Array.prototype.reduce.toString();
 // "function reduce() { [native code] }"
 ```
+
+### The Future
+
+`MacGyver` only deals with arrays for now. If you need more from it just ask, or better: raise a pull request.
