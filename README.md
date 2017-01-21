@@ -6,7 +6,7 @@
 
 
 
-Installation
+### Installation
 
 `npm install @customcommander/macgyver`
 
