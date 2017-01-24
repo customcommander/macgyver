@@ -4,7 +4,7 @@ lib_files = $(shell find lib -name "*.js")
 test_files = $(shell find test -name "*.spec.js")
 covered_files = $(addprefix build/covered/,$(lib_files))
 
-build: build/install build/lint build/test
+build: build/install build/macgyver.js
 lint: build/install build/lint
 test: build/install build/test
 dist: dist/macgyver.js
@@ -40,7 +40,11 @@ build/lint: $(lib_files) $(test_files)
 
 build/test: build/macgyver.js $(test_files) karma.conf.js
 	mkdir -p $@
-	BUNDLE=build/macgyver.js TEST_FILES="$(test_files)" COV_DIR=$@ $(NODE_BIN_DIR)/karma start
+ifdef TRAVIS
+	$(NODE_BIN_DIR)/karma start --browsers Chrome_Travis
+else
+	$(NODE_BIN_DIR)/karma start --browsers Chrome --log-level error
+endif
 	$(NODE_BIN_DIR)/istanbul report --dir $@/coverage --root $@ html
 	touch $@
 
