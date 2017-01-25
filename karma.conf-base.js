@@ -3,13 +3,8 @@ module.exports = function(config) {
         basePath: './',
         autoWatch: false,
         singleRun: true,
+        logLevel: config.ERROR,
         frameworks: ['mocha', 'chai'],
-        customLaunchers: {
-            Chrome_Travis: {
-                base: 'Chrome',
-                flags: ['--no-sandbox']
-            }
-        },
         files: [
             'build/macgyver.js',
             'test/macgyver.spec.js'
@@ -20,6 +15,7 @@ module.exports = function(config) {
             reporters: [
                 {type: 'json', subdir: '.'}
             ]
-        }
+        },
+        browsers: ['Chrome']
     });
 };
