@@ -38,12 +38,12 @@ build/lint: $(lib_files) $(test_files)
 	$(NODE_BIN_DIR)/eslint ./
 	touch $@
 
-build/test: build/macgyver.js $(test_files) karma.conf.js
+build/test: build/macgyver.js $(test_files) karma.conf-base.js karma.conf-travis.js
 	mkdir -p $@
 ifdef TRAVIS
-	$(NODE_BIN_DIR)/karma start --browsers Chrome_Travis
+	$(NODE_BIN_DIR)/karma start karma.conf-travis.js
 else
-	$(NODE_BIN_DIR)/karma start --browsers Chrome --log-level error
+	$(NODE_BIN_DIR)/karma start karma.conf-base.js
 endif
 	$(NODE_BIN_DIR)/istanbul report --dir $@/coverage --root $@ html
 	touch $@
